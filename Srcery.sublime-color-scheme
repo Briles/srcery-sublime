@@ -1,0 +1,174 @@
+{
+  "name": "Srcery",
+  "homepage": "https://github.com/Briles/srcery-sublime",
+  "description": "Based on Srcery for Vim (https://github.com/srcery-colors/srcery-vim)",
+  "originalAuthor": "https://github.com/srcery-colors",
+  "author": "Brian Reilly (https://github.com/Briles)",
+  "variables": {
+    "black": "#1C1B19",
+    "bright_black": "#2D2C29",
+    "hard_black": "#121212",
+    "xgray1": "#262626",
+    "xgray2": "#303030",
+    "xgray3": "#3A3A3A",
+    "xgray4": "#444444",
+    "xgray5": "#4E4E4E",
+    "white": "#918175",
+    "bright_white": "#FCE8C3",
+    "red": "#EF2F27",
+    "green": "#519F50",
+    "yellow": "#FBB829",
+    "blue": "#2C78BF",
+    "magenta": "#E02C6D",
+    "cyan": "#0AAEB3",
+    "orange": "#D75F00",
+    "bright_red": "#F75341",
+    "bright_green": "#98BC37",
+    "bright_yellow": "#FED06E",
+    "bright_blue": "#68A8E4",
+    "bright_magenta": "#FF5C8F",
+    "bright_cyan": "#53FDE9",
+    "bright_orange": "#FF8700",
+    "background": "#1C1B19",
+    "foreground": "#FCE8C3",
+    "border": "color(var(background) lightness(- 10%))",
+    "shadow": "color(var(background) lightness(- 5%))",
+    "guide": "color(var(foreground) alpha(0.2))",
+    "active_guide": "color(var(foreground) alpha(0.35))",
+    "stack_guide": "color(var(foreground) alpha(0.2))",
+    "ruler": "color(var(foreground) alpha(0.35))",
+    "heading_background": "color(var(background) lightness(+ 7%))",
+    "invisibles": "color(var(foreground) alpha(0.25))",
+    "--background": "var(background)",
+    "--foreground": "var(foreground)",
+    "--redish": "var(bright_red)",
+    "--orangish": "var(bright_orange)",
+    "--yellowish": "var(bright_yellow)",
+    "--greenish": "var(bright_green)",
+    "--cyanish": "var(bright_cyan)",
+    "--bluish": "var(bright_blue)",
+    "--purplish": "var(bright_magenta)"
+  },
+  "globals": {
+    "background": "var(background)",
+    "foreground": "var(foreground)",
+    "invisibles": "var(invisibles)",
+    "caret": "var(bright_white)",
+    "block_caret": "var(white)",
+    "line_highlight": "var(bright_black)",
+    "misspelling": "var(red)",
+    "fold_marker": "var(yellow)",
+    "minimap_border": "var(border)",
+    "accent": "var(yellow)",
+    "gutter": "var(background)",
+    "gutter_foreground": "var(white)",
+    "line_diff_width": "3",
+    "line_diff_added": "var(bright_green)",
+    "line_diff_modified": "var(bright_yellow)",
+    "line_diff_deleted": "var(bright_red)",
+    "selection": "var(xgray2)",
+    "selection_border_width": "0",
+    "inactive_selection": "var(xgray1)",
+    "selection_corner_style": "round",
+    "selection_corner_radius": "0",
+    "highlight": "var(yellow)",
+    "find_highlight": "var(yellow)",
+    "find_highlight_foreground": "var(background)",
+    "guide": "var(guide)",
+    "active_guide": "var(active_guide)",
+    "stack_guide": "var(stack_guide)",
+    "brackets_options": "underline",
+    "brackets_foreground": "var(yellow)",
+    "bracket_contents_options": "underline",
+    "bracket_contents_foreground": "var(yellow)",
+    "tags_options": "underline",
+    "tags_foreground": "var(yellow)",
+    "shadow": "var(shadow)",
+    "shadow_width": "6"
+  },
+  "rules": [
+    {
+      "name": "Text and Source Base Colors",
+      "scope": "none,source,text",
+      "foreground": "var(foreground)"
+    },
+    {
+      "name": "Punctuation",
+      "scope": "punctuation,punctuation.definition.string",
+      "foreground": "color(var(foreground) a(0.77))"
+    },
+    {
+      "name": "Comments",
+      "scope": "comment,comment text,markup.strikethrough,punctuation.definition.comment,punctuation.whitespace.comment,string.comment,text.cancelled",
+      "font_style": "italic",
+      "foreground": "var(white)"
+    },
+    {
+      "name": "Keywords Inside Comments",
+      "scope": "comment.keyword,comment.keyword.punctuation,comment.parameter,comment.punctuation,comment.string,comment.type,keyword.other.phpdoc.php,punctuation.definition.keyword.javadoc,source.groovy keyword.other.documentation,source.java keyword.other.documentation,storage.type.annotation.coffeescript,storage.type.class.jsdoc,storage.type.class.jsdoc punctuation.definition",
+      "foreground": "var(bright_white)"
+    },
+    {
+      "name": "Strings",
+      "scope": "string",
+      "foreground": "var(bright_green)"
+    },
+    {
+      "name": "Function Names",
+      "scope": "entity.name.function",
+      "foreground": "var(yellow)"
+    },
+    {
+      "name": "Function Calls",
+      "scope": "meta.function-call variable.function,support.function",
+      "foreground": "var(yellow)"
+    },
+    {
+      "name": "Functions",
+      "scope": "storage.type.function,variable.function",
+      "foreground": "var(bright_blue)"
+    },
+    {
+      "scope": "storage.type",
+      "foreground": "var(orange)"
+    },
+    {
+      "name": "Storage",
+      "scope": "storage",
+      "foreground": "var(red)"
+    },
+    {
+      "name": "Variables",
+      "scope": "punctuation.definition.variable,variable",
+      "foreground": "var(cyan)"
+    },
+    {
+      "name": "Keywords",
+      "scope": "keyword",
+      "foreground": "var(red)"
+    },
+    {
+      "name": "Parameters",
+      "scope": "parameter,punctuation.definition.parameter,variable.parameter",
+      "foreground": "var(foreground)"
+    },
+    {
+      "name": "Numeric",
+      "scope": "constant.numeric,punctuation.definition.constant.numeric",
+      "foreground": "var(bright_magenta)"
+    },
+    {
+      "name": "Operator",
+      "scope": "keyword.operator,operator",
+      "foreground": "var(bright_red)"
+    },
+    {
+      "scope": "support.class.builtin,support.constant.builtin",
+      "foreground": "var(bright_magenta)"
+    },
+    {
+      "scope": "constant.character.escape",
+      "foreground": "var(orange)"
+    }
+  ]
+}
